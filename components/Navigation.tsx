@@ -39,7 +39,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20 lg:h-24">
           <Link
             href="/"
-            className="text-2xl lg:text-3xl font-display font-bold text-primary-600 hover:text-primary-700 transition-colors"
+            className="text-2xl lg:text-3xl font-display font-bold text-primary-600 hover:text-primary-700 transition-colors ml-4 lg:ml-0"
           >
             {businessInfo.shortName}
           </Link>
@@ -91,7 +91,7 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`block py-3 text-base font-medium transition-colors ${
+                className={`block py-3 text-base font-medium transition-colors pl-4 ${
                   pathname === link.href
                     ? 'text-primary-600'
                     : 'text-neutral'
@@ -102,7 +102,7 @@ export default function Navigation() {
             ))}
             <a
               href={`tel:${businessInfo.phone}`}
-              className="flex items-center gap-2 mt-4 px-4 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
+              className="flex items-center gap-2 mt-4 px-3 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors mx-4"
             >
               <Phone size={20} />
               <span className="font-semibold">{businessInfo.phone}</span>
